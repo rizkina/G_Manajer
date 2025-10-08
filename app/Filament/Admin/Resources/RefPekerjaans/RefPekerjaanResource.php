@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Filament\Admin\Resources\RefPekerjaans;
+
+use App\Filament\Admin\Resources\RefPekerjaans\Pages\CreateRefPekerjaan;
+use App\Filament\Admin\Resources\RefPekerjaans\Pages\EditRefPekerjaan;
+use App\Filament\Admin\Resources\RefPekerjaans\Pages\ListRefPekerjaans;
+use App\Filament\Admin\Resources\RefPekerjaans\Schemas\RefPekerjaanForm;
+use App\Filament\Admin\Resources\RefPekerjaans\Tables\RefPekerjaansTable;
+use App\Models\RefPekerjaan;
+use BackedEnum;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Table;
+
+class RefPekerjaanResource extends Resource
+{
+    protected static ?string $model = RefPekerjaan::class;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static ?string $recordTitleAttribute = 'nama_pekerjaan';
+
+    public static function form(Schema $schema): Schema
+    {
+        return RefPekerjaanForm::configure($schema);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return RefPekerjaansTable::configure($table);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListRefPekerjaans::route('/'),
+            'create' => CreateRefPekerjaan::route('/create'),
+            'edit' => EditRefPekerjaan::route('/{record}/edit'),
+        ];
+    }
+}

@@ -1,6 +1,6 @@
 APP_NAME="G-MANAGER"
 APP_ENV=local
-APP_KEY=base64:XUzJRKVdIcvqM7Bywr/4OZelRVpw0VRFZGzHanEVOSw= 
+APP_KEY=
 APP_DEBUG=true
 APP_URL=http://localhost # Sesuaikan dengan server_name di Nginx
 

@@ -18,7 +18,7 @@ class KurikulumResource extends Resource
 {
     protected static ?string $model = Kurikulum::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::ChartBarSquare;
 
     protected static ?string $recordTitleAttribute = 'nama_kurikulum';
 

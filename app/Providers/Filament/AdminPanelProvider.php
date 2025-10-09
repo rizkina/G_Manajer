@@ -53,17 +53,13 @@ class AdminPanelProvider extends PanelProvider
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
             ])
+            ->navigationGroups([
+                'Reerence',
+                'System Settings',
+                'Users Manajemen',
+            ])
             ->plugins([
-                FilamentShieldPlugin::make() //,
-                    ->navigationLabel('Label')                  // string|Closure|null
-                    ->navigationIcon('heroicon-o-home')         // string|Closure|null  
-                    ->activeNavigationIcon('heroicon-s-home')   // string|Closure|null
-                    ->navigationGroup('Users & Roles')                  // string|Closure|null
-                    ->navigationSort(10)                        // int|Closure|null
-                    ->navigationBadge('5')                      // string|Closure|null
-                    ->navigationBadgeColor('success')           // string|array|Closure|null
-                    ->navigationParentItem('parent.item')       // string|Closure|null
-                    ->registerNavigation(),    
+                FilamentShieldPlugin::make(),      // string|Closure|null
             ])
             ->authMiddleware([
                 Authenticate::class,

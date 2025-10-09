@@ -18,7 +18,7 @@ class ProgramJurusanResource extends Resource
 {
     protected static ?string $model = ProgramJurusan::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::CheckBadge;
 
     protected static ?string $recordTitleAttribute = 'nama_program_jurusan';
 

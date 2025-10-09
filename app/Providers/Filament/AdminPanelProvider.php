@@ -54,7 +54,8 @@ class AdminPanelProvider extends PanelProvider
                 DispatchServingFilamentEvent::class,
             ])
             ->navigationGroups([
-                'Reerence',
+                'Period',
+                'Reference',
                 'System Settings',
                 'Users Manajemen',
             ])

@@ -9,6 +9,7 @@ use App\Filament\Admin\Resources\Tingkats\Schemas\TingkatForm;
 use App\Filament\Admin\Resources\Tingkats\Tables\TingkatsTable;
 use App\Models\Tingkat;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -19,6 +20,8 @@ class TingkatResource extends Resource
     protected static ?string $model = Tingkat::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Square3Stack3d;
+
+    protected static string|UnitEnum|null $navigationGroup = 'Period';
 
     protected static ?string $recordTitleAttribute = 'nama_tingkat';
 

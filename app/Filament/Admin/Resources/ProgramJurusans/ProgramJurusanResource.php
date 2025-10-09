@@ -9,6 +9,7 @@ use App\Filament\Admin\Resources\ProgramJurusans\Schemas\ProgramJurusanForm;
 use App\Filament\Admin\Resources\ProgramJurusans\Tables\ProgramJurusansTable;
 use App\Models\ProgramJurusan;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -19,6 +20,8 @@ class ProgramJurusanResource extends Resource
     protected static ?string $model = ProgramJurusan::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::CheckBadge;
+
+    protected static string|UnitEnum|null $navigationGroup = 'Period';
 
     protected static ?string $recordTitleAttribute = 'nama_program_jurusan';
 
